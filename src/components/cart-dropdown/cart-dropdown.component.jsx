@@ -26,15 +26,15 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       ) : (
         <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
       )}
-      <CartDropdownButton
-        onClick={() => {
-          history.push("/checkout");
-          dispatch(toggleCartHidden());
-        }}
-      >
-        GO TO CHECKOUT
-      </CartDropdownButton>
     </CartItemsContainer>
+    <CartDropdownButton
+      onClick={() => {
+        history.push("/checkout");
+        dispatch(toggleCartHidden());
+      }}
+    >
+      GO TO CHECKOUT
+    </CartDropdownButton>
   </CartDropdownContainer>
 );
 
